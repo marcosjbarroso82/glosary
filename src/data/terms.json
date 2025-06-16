@@ -8,7 +8,7 @@
     {
         "name": "apix",
         "displayName": "APIx",
-        "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[restx|RESTful API2]]."
+        "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[restx|RESTful API2]].."
       },
     {
       "name": "rest",
