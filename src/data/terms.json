@@ -1,0 +1,24 @@
+{
+  "terms": [
+    {
+      "name": "api",
+      "displayName": "API",
+      "definition": "Application Programming Interface - A set of rules and protocols that allows different software applications to communicate with each other. See also [[rest|RESTful API]]."
+    },
+    {
+      "name": "rest",
+      "displayName": "REST",
+      "definition": "Representational State Transfer - An architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations."
+    },
+    {
+      "name": "vue",
+      "displayName": "Vue.js",
+      "definition": "A progressive JavaScript framework for building user interfaces. It's designed to be incrementally adoptable and can be used to build single-page applications ([[spa]])."
+    },
+    {
+      "name": "spa",
+      "displayName": "SPA",
+      "definition": "Single Page Application - A web application that loads a single HTML page and dynamically updates it as the user interacts with the app. See also [[vue|Vue.js framework]]."
+    }
+  ]
+} 
