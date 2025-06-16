@@ -18,8 +18,17 @@ watch(() => route.params.termName, (newTermName) => {
       selectedLetter.value = term.displayName[0]
       selectedTerm.value = term
     }
+  } else {
+    selectedTerm.value = null
   }
 }, { immediate: true })
+
+// Watch for selected letter changes to update URL
+watch(selectedLetter, (newLetter) => {
+  if (route.params.termName) {
+    router.push('/')
+  }
+})
 
 const selectLetter = (letter) => {
   selectedLetter.value = letter
@@ -41,7 +50,7 @@ const formatDefinition = (definition) => {
     const termObj = terms.find(t => t.name.toLowerCase() === termName.toLowerCase())
     if (termObj) {
       const linkText = displayText || termObj.displayName
-      return `<a href="/term/${termObj.name}" @click.prevent="router.push('/term/${termObj.name}')">${linkText}</a>`
+      return `<a href="/glosary/term/${termObj.name}" @click.prevent="router.push('/term/${termObj.name}')">${linkText}</a>`
     }
     return match
   })
