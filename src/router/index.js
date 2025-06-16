@@ -14,6 +14,11 @@ const router = createRouter({
       name: 'term',
       component: App,
       props: true
+    },
+    {
+      // Catch all route to handle 404s
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
     }
   ]
 })
