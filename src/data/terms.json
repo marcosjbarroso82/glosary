@@ -19,7 +19,36 @@
         "names": ["dss", "sistema de apoyo a la toma de decisiones", "sistemas de apoyo a la toma de decisiones"],
         "displayName": "DSS",
         "definition": "<b>Sistema de Apoyo a la Toma de Decisiones</b> (Decision Support System) - Sistema interactivo basado en computadora que combina datos, modelos analíticos y herramientas para ayudar en decisiones complejas, especialmente no estructuradas. <ul><li><b>Componentes:</b> Base de datos, base de modelos, interfaz de usuario y tomador de decisiones.</li><li><b>Características:</b> Flexible, adaptable, permite simulaciones y análisis 'qué pasaría si', usa datos internos y externos, soporta minería de datos y algoritmos heurísticos.</li><li><b>Capacidades:</b> Apoya la resolución de problemas en fases de inteligencia, diseño, elección, implementación y monitoreo; soporta decisiones ad hoc e institucionales; y problemas estructurados y no estructurados a nivel operativo, táctico y estratégico.</li><li><b>Objetivos:</b> Apoyar el juicio humano, fomentar la creatividad y permitir la exploración libre de alternativas.</li><li>Soporte para Multiple Niveles Organizacionales<ul><li>Operativos: Decisiones Diarias</li><li>Tactico: Planificacion y control</li><li>Estrategico: Decisiones de largo plazo</li></ul></li><li>Ver también [[si|Sistema de Información]], [[mis|MIS]], [[tps|TPS]].</li></ul>"
+      },
+      {
+        "names": ["objetivos_organizacionales", "cumplimiento de objetivos organizacionales"],
+        "displayName": "Objetivos Organizacionales",
+        "definition": "Metas establecidas por una organización para guiar sus actividades y medir su éxito. El [[mis|MIS]] contribuye al monitoreo del cumplimiento de estos objetivos mediante reportes y análisis periódicos."
+      },
+      {
+        "names": ["reportes_indicador_clave", "reportes por indicador clave"],
+        "displayName": "Reportes por Indicador Clave",
+        "definition": "Reportes generados por el [[mis|MIS]] que resumen actividades críticas recientes vinculadas a indicadores clave de desempeño (KPI)."
+      },
+      {
+        "names": ["reportes_pedido", "reportes a pedido"],
+        "displayName": "Reportes a Pedido",
+        "definition": "Reportes generados por el [[mis|MIS]] en respuesta a solicitudes específicas de los usuarios para cubrir necesidades puntuales de información."
+      },
+      {
+        "names": ["ingenieria_software", "ingenieria del software", "ingeniería del software"],
+        "displayName": "Ingeniería del Software",
+        "definition": "Disciplina que aplica principios, metodologías y herramientas rigurosas para garantizar un desarrollo organizado, eficiente y de calidad del software. <ul><li><b>Objetivo:</b> Controlar el proceso de desarrollo.</li><li><b>Beneficios:</b> Mejora la calidad, reduce errores y facilita mantenimiento.</li><li><b>Aplicaciones:</b> Metodologías tradicionales y ágiles.</li></ul> Ver también [[desarrollo_si|Desarrollo de SI]]."
+      },
+      {
+        "names": ["desarrollo_si", "desarrollo de si", "desarrollo de sistemas de informacion"],
+        "displayName": "Desarrollo de SI",
+        "definition": "Proceso estructurado de creación de un [[si|sistema de información]], incluyendo etapas como investigación, análisis, diseño, implementación y mantenimiento. <ul><li><b>Fases:</b> Investigación, análisis, diseño, implementación y mantenimiento.</li><li><b>Metodologías:</b> Tradicionales (cascada) y ágiles (scrum, XP).</li><li><b>Objetivo:</b> Alinear el sistema con los requerimientos del usuario y de la organización.</li><li>Participantes: [[desarrollo_si_participantes|Participantes]]</li></ul> Ver también [[ingenieria_software|Ingeniería del Software]]."
+      },
+      {
+        "names": ["desarrollo_si_participantes", "participantes del desarrollo de si", "participantes del desarrollo de sistemas de informacion"],
+        "displayName": "Participantes del Desarrollo de SI",
+        "definition": "Personas y roles clave que intervienen en las distintas fases del desarrollo de un sistema de información. <ul><li><b>Clientes o administradores:</b> Definen objetivos y proveen recursos.</li><li><b>Líder de proyecto:</b> Coordina, planifica y controla el desarrollo.</li><li><b>Analistas:</b> Identifican requerimientos funcionales, procesos y documentación.</li><li><b>Diseñadores:</b> Traducen modelos lógicos a soluciones técnicas.</li><li><b>Programadores:</b> Codifican el sistema.</li><li><b>Testers:</b> Verifican que el sistema cumpla con los requerimientos.</li><li><b>Entrenadores:</b> Capacitan a los usuarios finales.</li></ul> Ver también [[desarrollo_si|Desarrollo de SI]]."
       }
     ]
   }
-  
