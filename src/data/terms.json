@@ -3,13 +3,23 @@
     {
       "name": "api",
       "displayName": "API",
-      "definition": "Application Programming Interface - A set of rules and protocols that allows different software applications to communicate with each other. See also [[rest|RESTful API]]."
+      "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[rest|RESTful API]]."
     },
+    {
+        "name": "api2",
+        "displayName": "API2",
+        "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[restx|RESTful API2]]."
+      },
     {
       "name": "rest",
       "displayName": "REST",
       "definition": "Representational State Transfer - An architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations."
     },
+    {
+        "name": "restx",
+        "displayName": "REST2",
+        "definition": "Representational State Transfer - An architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations."
+      },
     {
       "name": "vue",
       "displayName": "Vue.js",
