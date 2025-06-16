@@ -12,16 +12,21 @@ const terms = termsData.terms
 
 // Add computed property for available letters
 const availableLetters = computed(() => {
-  const letters = new Set(terms.map(term => term.displayName[0].toUpperCase()))
+  const letters = new Set()
+  terms.forEach(term => {
+    term.names.forEach(name => {
+      letters.add(name[0].toUpperCase())
+    })
+  })
   return alphabet.filter(letter => letters.has(letter))
 })
 
 // Watch for route changes
 watch(() => route.params.termName, (newTermName) => {
   if (newTermName) {
-    const term = terms.find(t => t.name.toLowerCase() === newTermName.toLowerCase())
+    const term = terms.find(t => t.names.some(name => name.toLowerCase() === newTermName.toLowerCase()))
     if (term) {
-      selectedLetter.value = term.displayName[0]
+      selectedLetter.value = term.names[0][0].toUpperCase()
       selectedTerm.value = term
     } else {
       // If term not found, redirect to home
@@ -39,7 +44,7 @@ const selectLetter = (letter) => {
 
 const filteredTerms = computed(() => {
   return terms.filter(term => 
-    term.displayName.toUpperCase().startsWith(selectedLetter.value)
+    term.names.some(name => name.toUpperCase().startsWith(selectedLetter.value))
   )
 })
 
@@ -59,7 +64,7 @@ onMounted(() => {
   if (route.params.termName) {
     const term = terms.find(t => t.name.toLowerCase() === route.params.termName.toLowerCase())
     if (term) {
-      selectedLetter.value = term.displayName[0]
+      selectedLetter.value = term.names[0][0].toUpperCase()
       selectedTerm.value = term
     }
   }
