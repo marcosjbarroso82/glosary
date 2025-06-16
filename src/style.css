@@ -80,3 +80,7 @@ button:focus-visible {
 .term-detail h2 {
   text-align: center;
 }
+
+.term-detail ul ul {
+  margin-left: 20px;
+}

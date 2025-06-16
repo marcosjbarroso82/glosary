@@ -3,7 +3,7 @@
       {
         "names": ["si", "sistema de informacion", "sistemas de informacion"],
         "displayName": "SI",
-        "definition": "<b>Sistema de Información</b> - Conjunto de elementos interrelacionados que recopilan, procesan, almacenan y distribuyen información para facilitar la toma de decisiones en las organizaciones. Puede ser manual o automatizado. <ul><li><b>Objetivo:</b> Apoyar la toma de decisiones.</li><li><b>Actividades:</b> Entrada, procesamiento, salida y retroalimentación de datos.</li><li><b>Recursos:</b> Tecnológicos, humanos, económicos, insumos, infraestructura y logísticos.</li><li><b>Ambiente:</b> Factores externos como clientes, regulaciones y otros sistemas.</li><li><b>Clasificación:</b> [[mis|MIS]], [[tps|TPS]], [[dss|DSS]].</li><li>Relacionado: [[desarrollo_si|Desarrollo de SI]]</li></ul> "
+        "definition": "<b>Sistema de Información</b> - Conjunto de elementos interrelacionados que recopilan, procesan, almacenan y distribuyen información para facilitar la toma de decisiones en las organizaciones. Puede ser manual o automatizado. <ul><li><b>Objetivo:</b> Apoyar la toma de decisiones.</li><li><b>Actividades:</b> Entrada, procesamiento, salida y retroalimentación de datos.</li><li><b>Recursos:</b> Tecnológicos, humanos, económicos, insumos, infraestructura y logísticos.</li><li><b>Ambiente:</b> Factores externos como clientes, regulaciones y otros sistemas.</li><li><b>Clasificación:</b> [[mis|MIS]], [[tps|TPS]], [[dss|DSS]].</li><li>Relacionado: [[desarrollo_si|Desarrollo de SI]]</li></ul>"
       },
       {
         "names": ["tps", "sistema transaccional", "sistemas transaccionales"],
@@ -13,27 +13,23 @@
       {
         "names": ["mis", "sistema de informacion gerencial", "sistemas de informacion gerencial"],
         "displayName": "MIS",
-        "definition": "<b>Sistemas de Información Gerencial</b> - Brindan información estructurada y periódica para apoyar decisiones tácticas en mandos intermedios. <ul><li><b>Usuarios:</b> Mandos medios o gerenciales.</li><li><b>Tipo de información:</b> Informes periódicos, reportes agregados.</li><li><b>Objetivo:</b> Facilitar decisiones tácticas.</li></ul> Ver también [[si|Sistema de Información]]."
+        "definition": "<b>Sistemas de Información Gerencial</b> - Brindan información estructurada y periódica para apoyar decisiones tácticas en mandos intermedios. <ul><li><b>Usuarios:</b> Mandos medios o gerenciales.</li><li><b>Objetivo:</b> <ul><li>Facilitar decisiones tácticas</li><li>apoyar la gestión eficiente de recursos</li><li>brindar retroalimentación sobre la operatoria diaria</li><li>proveer información consolidada y estructurada para la [[toma_decisiones|toma de decisiones]]</li><li>monitorear el cumplimiento de [[objetivos_organizacionales|objetivos organizacionales]].</li></ul></li><li><b>Entradas:</b><ul><li><b>Fuentes Internas</b> como [[tps|TPS]]</li><li><b>fuentes externas</b> como clientes, proveedores, accionistas y competencia.</li></ul></li><li><b>Salidas:</b><ul><li><b>Reportes calendarizados:</b> se producen de forma periódica (diarios, semanales, mensuales).</li><li><b>Reportes por indicador clave:</b> resumen de actividades críticas recientes.</li><li><b>Reportes a pedido:</b> generados a solicitud específica del usuario.</li><li><b>Reportes de excepción:</b> emitidos ante eventos o desviaciones inusuales.</li><li><b>Reportes drill-down:</b> permiten profundizar desde información general hasta el detalle específico.</li></ul><b>Características clave:</b> <ul><li>Integración de datos de múltiples fuentes</li><li>personalización de reportes según el perfil del usuario</li><li>soporte para decisiones tácticas y estratégicas</li><li>automatización y repetitividad en la generación de información.</li></ul></li><li><b>Importancia:</b> Permite análisis históricos, comparación de datos, análisis de tendencias y ajustes estratégicos, convirtiéndose en herramienta esencial para la <b>eficiencia operativa y el cumplimiento de metas organizacionales.</b></li><li>Ver también [[si|Sistema de Información]].</li></ul> "
       },
       {
-        "names": ["dss", "sistema de soporte a decisiones", "sistemas de soporte a decisiones"],
-        "displayName": "DSS",
-        "definition": "<b>Sistemas de Soporte a Decisiones</b> - Ayudan en la toma de decisiones estratégicas no estructuradas, utilizando datos tanto internos como externos. <ul><li><b>Enfoque:</b> Decisiones no rutinarias.</li><li><b>Fuentes de datos:</b> Internas y externas.</li><li><b>Herramientas:</b> Modelos analíticos, simulaciones, sistemas expertos.</li></ul> Ver también [[si|Sistema de Información]]."
+        "names": ["objetivos_organizacionales", "cumplimiento de objetivos organizacionales"],
+        "displayName": "Objetivos Organizacionales",
+        "definition": "Metas establecidas por una organización para guiar sus actividades y medir su éxito. El [[mis|MIS]] contribuye al monitoreo del cumplimiento de estos objetivos mediante reportes y análisis periódicos."
       },
       {
-        "names": ["ingenieria_software", "ingenieria del software", "ingeniería del software"],
-        "displayName": "Ingeniería del Software",
-        "definition": "Disciplina que aplica principios, metodologías y herramientas rigurosas para garantizar un desarrollo organizado, eficiente y de calidad del software. <ul><li><b>Objetivo:</b> Controlar el proceso de desarrollo.</li><li><b>Beneficios:</b> Mejora la calidad, reduce errores y facilita mantenimiento.</li><li><b>Aplicaciones:</b> Metodologías tradicionales y ágiles.</li></ul> Ver también [[desarrollo_si|Desarrollo de SI]]."
+        "names": ["reportes_indicador_clave", "reportes por indicador clave"],
+        "displayName": "Reportes por Indicador Clave",
+        "definition": "Reportes generados por el [[mis|MIS]] que resumen actividades críticas recientes vinculadas a indicadores clave de desempeño (KPI)."
       },
       {
-        "names": ["desarrollo_si", "desarrollo de si", "desarrollo de sistemas de informacion"],
-        "displayName": "Desarrollo de SI",
-        "definition": "Proceso estructurado de creación de un [[si|sistema de información]], incluyendo etapas como investigación, análisis, diseño, implementación y mantenimiento. <ul><li><b>Fases:</b> Investigación, análisis, diseño, implementación y mantenimiento.</li><li><b>Metodologías:</b> Tradicionales (cascada) y ágiles (scrum, XP).</li><li><b>Objetivo:</b> Alinear el sistema con los requerimientos del usuario y de la organización.</li><li>Participantes: [[desarrollo_si_participantes|Participantes]]</li></ul> Ver también [[ingenieria_software|Ingeniería del Software]]."
-      },
-      {
-        "names": ["desarrollo_si_participantes", "participantes del desarrollo de si", "participantes del desarrollo de sistemas de informacion"],
-        "displayName": "Participantes del Desarrollo de SI",
-        "definition": "Personas y roles clave que intervienen en las distintas fases del desarrollo de un sistema de información. <ul><li><b>Clientes o administradores:</b> Definen objetivos y proveen recursos.</li><li><b>Líder de proyecto:</b> Coordina, planifica y controla el desarrollo.</li><li><b>Analistas:</b> Identifican requerimientos funcionales, procesos y documentación.</li><li><b>Diseñadores:</b> Traducen modelos lógicos a soluciones técnicas.</li><li><b>Programadores:</b> Codifican el sistema.</li><li><b>Testers:</b> Verifican que el sistema cumpla con los requerimientos.</li><li><b>Entrenadores:</b> Capacitan a los usuarios finales.</li></ul> Ver también [[desarrollo_si|Desarrollo de SI]]."
+        "names": ["reportes_pedido", "reportes a pedido"],
+        "displayName": "Reportes a Pedido",
+        "definition": "Reportes generados por el [[mis|MIS]] en respuesta a solicitudes específicas de los usuarios para cubrir necesidades puntuales de información."
       }
     ]
   }
+  
