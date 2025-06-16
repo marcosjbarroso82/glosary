@@ -72,3 +72,11 @@ button:focus-visible {
     background-color: #1a1a1a;
   }
 }
+
+.term-detail {
+  text-align: left;
+}
+
+.term-detail h2 {
+  text-align: center;
+}
