@@ -6,24 +6,19 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'home',
       component: App
     },
     {
       path: '/term/:termName',
+      name: 'term',
       component: App,
       props: true
     }
   ]
 })
 
-// Add navigation guard to handle base path
-router.beforeEach((to, from, next) => {
-  // Remove the base path from the URL for internal routing
-  if (to.path.startsWith('/glosary')) {
-    next(to.path.replace('/glosary', ''))
-  } else {
-    next()
-  }
-})
+// Remove the navigation guard as it's causing the redirect issue
+// The base path is already handled by createWebHistory('/glosary/')
 
 export default router 

@@ -17,25 +17,18 @@ watch(() => route.params.termName, (newTermName) => {
     if (term) {
       selectedLetter.value = term.displayName[0]
       selectedTerm.value = term
+    } else {
+      // If term not found, redirect to home
+      router.push('/')
     }
   } else {
     selectedTerm.value = null
   }
 }, { immediate: true })
 
-// Watch for selected letter changes to update URL
-watch(selectedLetter, (newLetter) => {
-  if (route.params.termName) {
-    router.push('/')
-  }
-})
-
 const selectLetter = (letter) => {
   selectedLetter.value = letter
   selectedTerm.value = null
-  if (route.params.termName) {
-    router.push('/')
-  }
 }
 
 const filteredTerms = computed(() => {
@@ -50,7 +43,7 @@ const formatDefinition = (definition) => {
     const termObj = terms.find(t => t.name.toLowerCase() === termName.toLowerCase())
     if (termObj) {
       const linkText = displayText || termObj.displayName
-      return `<a href="/glosary/term/${termObj.name}" @click.prevent="router.push('/term/${termObj.name}')">${linkText}</a>`
+      return `<a href="/glosary/term/${termObj.name}" @click.prevent="router.push('/term/${termObj.name}')" class="term-link">${linkText}</a>`
     }
     return match
   })
@@ -87,7 +80,7 @@ onMounted(() => {
       <div v-if="selectedTerm">
         <!-- Term Detail View -->
         <div class="term-detail">
-          <button class="back-btn" @click="selectedTerm = null">← Back to List</button>
+          <button class="back-btn" @click="router.push('/')">← Back to List</button>
           <div class="term-card">
             <h2>{{ selectedTerm.displayName }}</h2>
             <p v-html="formatDefinition(selectedTerm.definition)"></p>
@@ -104,7 +97,7 @@ onMounted(() => {
             v-for="term in filteredTerms" 
             :key="term.name" 
             class="term-item"
-            @click="selectedTerm = term"
+            @click="router.push('/term/' + term.name)"
           >
             {{ term.displayName }}
           </div>
@@ -239,12 +232,13 @@ h1 {
   font-size: 0.9375rem;
 }
 
-a {
+.term-link {
   color: #4CAF50;
   text-decoration: none;
+  cursor: pointer;
 }
 
-a:hover {
+.term-link:hover {
   text-decoration: underline;
 }
 
