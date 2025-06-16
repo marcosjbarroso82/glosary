@@ -39,7 +39,7 @@ const filteredTerms = computed(() => {
 
 const formatDefinition = (definition) => {
   // Replace [[Term|Display Text]] or [[Term]] with clickable links
-  return definition.replace(/\[\[([A-Za-z]+)(?:\|([^\]]+))?\]\]/g, (match, termName, displayText) => {
+  return definition.replace(/\[\[([A-Za-z0-9\-_.]+)(?:\|([^\]]+))?\]\]/g, (match, termName, displayText) => {
     const termObj = terms.find(t => t.name.toLowerCase() === termName.toLowerCase())
     if (termObj) {
       const linkText = displayText || termObj.displayName
