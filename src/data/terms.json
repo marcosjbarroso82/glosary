@@ -3,11 +3,11 @@
     {
       "name": "api",
       "displayName": "API",
-      "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[rest|RESTful API]]."
+      "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[rest|RESTful API]].<ul><li>[[apix|APIx]]</li></ul>"
     },
     {
-        "name": "api2",
-        "displayName": "API2",
+        "name": "apix",
+        "displayName": "APIx",
         "definition": "<b>Application Programming Interface</b> - A set of rules and protocols that allows different software applications to communicate with each other. See also [[restx|RESTful API2]]."
       },
     {
