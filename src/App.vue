@@ -51,10 +51,10 @@ const filteredTerms = computed(() => {
 const formatDefinition = (definition) => {
   // Replace [[Term|Display Text]] or [[Term]] with clickable links
   return definition.replace(/\[\[([A-Za-z0-9\-_.]+)(?:\|([^\]]+))?\]\]/g, (match, termName, displayText) => {
-    const termObj = terms.find(t => t.name.toLowerCase() === termName.toLowerCase())
+    const termObj = terms.find(t => t.names.some(name => name.toLowerCase() === termName.toLowerCase()))
     if (termObj) {
       const linkText = displayText || termObj.displayName
-      return `<a href="/glosary/term/${termObj.name}" @click.prevent="router.push('/term/${termObj.name}')" class="term-link">${linkText}</a>`
+      return `<a href="/glosary/term/${termObj.names[0]}" @click.prevent="router.push('/term/${termObj.names[0]}')" class="term-link">${linkText}</a>`
     }
     return match
   })
@@ -62,7 +62,7 @@ const formatDefinition = (definition) => {
 
 onMounted(() => {
   if (route.params.termName) {
-    const term = terms.find(t => t.name.toLowerCase() === route.params.termName.toLowerCase())
+    const term = terms.find(t => t.names.some(name => name.toLowerCase() === route.params.termName.toLowerCase()))
     if (term) {
       selectedLetter.value = term.names[0][0].toUpperCase()
       selectedTerm.value = term
@@ -106,9 +106,9 @@ onMounted(() => {
         <div v-else class="terms-list">
           <div 
             v-for="term in filteredTerms" 
-            :key="term.name" 
+            :key="term.names[0]" 
             class="term-item"
-            @click="router.push('/term/' + term.name)"
+            @click="router.push('/term/' + term.names[0])"
           >
             {{ term.displayName }}
           </div>
