@@ -10,6 +10,12 @@ const selectedLetter = ref('A')
 const selectedTerm = ref(null)
 const terms = termsData.terms
 
+// Add computed property for available letters
+const availableLetters = computed(() => {
+  const letters = new Set(terms.map(term => term.displayName[0].toUpperCase()))
+  return alphabet.filter(letter => letters.has(letter))
+})
+
 // Watch for route changes
 watch(() => route.params.termName, (newTermName) => {
   if (newTermName) {
@@ -66,7 +72,7 @@ onMounted(() => {
       <h1>Glossary</h1>
       <div class="alphabet-nav">
         <button 
-          v-for="letter in alphabet" 
+          v-for="letter in availableLetters" 
           :key="letter"
           @click="selectLetter(letter)"
           :class="{ active: selectedLetter === letter }"
