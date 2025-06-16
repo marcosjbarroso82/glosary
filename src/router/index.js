@@ -1,20 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import App from '../App.vue'
 
-const routes = [
-  {
-    path: '/',
-    component: App
-  },
-  {
-    path: '/term/:termName',
-    component: App
-  }
-]
-
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+  history: createWebHistory('/glosary/'),
+  routes: [
+    {
+      path: '/',
+      component: App
+    },
+    {
+      path: '/term/:termName',
+      component: App
+    }
+  ]
 })
 
 export default router 
