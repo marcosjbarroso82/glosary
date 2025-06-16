@@ -8,7 +8,7 @@
       {
         "names": ["tps", "sistema transaccional", "sistemas transaccionales"],
         "displayName": "TPS",
-        "definition": "<b>Sistemas Transaccionales</b> - Automatizan tareas rutinarias a nivel operativo. Registran y procesan transacciones básicas como ventas, compras y sueldos. <ul><li><b>Enfoque:</b> Nivel operativo.</li><li><b>Funciones:</b> Registrar, almacenar y procesar transacciones.</li><li><b>Ejemplos:</b> Sistemas de nómina, facturación, inventarios.</li></ul> Ver también [[si|Sistema de Información]]."
+        "definition": "<b>Sistemas Transaccionales</b> (Transaction Processing Systems) - Sistemas informáticos diseñados para registrar, procesar y almacenar las transacciones rutinarias de una organización. <ul><li><b>Enfoque:</b> Nivel operativo.</li><li><b>Funciones:</b> Registrar, almacenar y procesar transacciones básicas como ventas, compras y sueldos.</li><li><b>Características de las transacciones:</b> Operaciones individuales, breves e indivisibles con identificador único, fecha, hora, origen y ubicación.</li><li><b>Componentes:</b> Hardware, software, bases de datos, personal, telecomunicaciones y procedimientos operativos.</li><li><b>Objetivos:</b> Procesar grandes volúmenes de datos con precisión, asegurar integridad y calidad, reducir burocracia, generar informes, mejorar eficiencia del personal, y brindar soporte a sistemas como [[mis|MIS]], [[dss|DSS]], y ERP.</li><li><b>Pasos del procesamiento:</b> Captura de datos, validación, procesamiento, actualización de bases de datos, emisión de comprobantes.</li><li><b>Modos de procesamiento:</b> Por lotes, en línea, entrada en línea con procesamiento diferido.</li><li><b>Áreas funcionales:</b> Finanzas, ventas, logística, recursos humanos.</li><li><b>Ejemplos:</b> Procesamiento de pedidos y compras.</li></ul> Ver también [[si|Sistema de Información]]."
       },
       {
         "names": ["mis", "sistema de informacion gerencial", "sistemas de informacion gerencial"],
@@ -37,4 +37,3 @@
       }
     ]
   }
-  
