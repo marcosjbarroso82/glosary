@@ -9,6 +9,7 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const selectedLetter = ref('A')
 const selectedTerm = ref(null)
 const terms = termsData.terms
+const isFullscreen = ref(false)
 
 // Add computed property for available letters
 const availableLetters = computed(() => {
@@ -60,6 +61,21 @@ const formatDefinition = (definition) => {
   })
 }
 
+// Add fullscreen toggle function
+const toggleFullscreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.error(`Error attempting to enable fullscreen: ${err.message}`)
+    })
+    isFullscreen.value = true
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen()
+      isFullscreen.value = false
+    }
+  }
+}
+
 onMounted(() => {
   if (route.params.termName) {
     const term = terms.find(t => t.names.some(name => name.toLowerCase() === route.params.termName.toLowerCase()))
@@ -68,13 +84,26 @@ onMounted(() => {
       selectedTerm.value = term
     }
   }
+
+  // Add fullscreen change event listener
+  document.addEventListener('fullscreenchange', () => {
+    isFullscreen.value = !!document.fullscreenElement
+  })
 })
 </script>
 
 <template>
   <div class="app">
     <header class="header">
-      <h1>Glossary</h1>
+      <div class="header-content">
+        <button 
+          class="fullscreen-btn" 
+          @click="toggleFullscreen"
+          :title="isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'"
+        >
+          {{ isFullscreen ? '⤓' : '⤢' }}
+        </button>
+      </div>
       <div class="alphabet-nav">
         <button 
           v-for="letter in availableLetters" 
@@ -134,6 +163,14 @@ onMounted(() => {
   padding: 0.5rem 0;
   z-index: 100;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 h1 {
@@ -253,6 +290,25 @@ h1 {
   text-decoration: underline;
 }
 
+.fullscreen-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  color: #2c3e50;
+  transition: color 0.2s;
+  z-index: 101;
+}
+
+.fullscreen-btn:hover {
+  color: #4CAF50;
+}
+
 @media (max-width: 600px) {
   .app {
     padding: 0.25rem;
@@ -260,6 +316,10 @@ h1 {
 
   .header {
     padding: 0.25rem 0;
+  }
+
+  .header-content {
+    padding: 0 0.5rem;
   }
 
   .alphabet-nav {
@@ -273,6 +333,12 @@ h1 {
 
   .term-item {
     padding: 0.625rem 0.875rem;
+  }
+
+  .fullscreen-btn {
+    right: 0.5rem;
+    font-size: 1.25rem;
+    padding: 0.2rem 0.4rem;
   }
 }
 </style>
